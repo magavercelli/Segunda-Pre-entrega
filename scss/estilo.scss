@@ -1,0 +1,194 @@
+@import "variables";
+@import "mixin";
+@import "header";
+@import "navegacion";
+@import "footer";
+@import "formulario";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient($color-body);
+   
+}
+
+//TÍTULOS /*TÍTULOS*/
+
+h1 {
+    @include heading;
+
+    @media (min-width: 768px) {
+        font-size: 25px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 35px;
+    }
+}
+
+h2 {
+    @include heading;
+    font-size: 1.8rem;
+
+    @media (min-width: 768px) {
+        font-size: 2.5rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 3rem;
+    }
+
+}
+
+//MAIN-INDEX - /*MAIN-INDEX*/
+.contenidoPrincipal {
+    box-shadow: $shadow-box;
+    background-color: $color-bg-shadow;
+    width: 70%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: .5rem;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .seccionDos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .imagenDos {
+        width: 100%;
+        margin: auto;
+        border-radius: .5rem;
+    }
+
+    .seccionUno {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .seccionUno p {
+        @include parrafos;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .contenidoPrincipal {
+            width: auto;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .grid {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+        }
+    
+        .seccionUno p {
+            font-size: 1.8rem;
+            margin: auto;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .seccionUno p {
+            font-size: 2rem;
+        }
+
+    }
+    
+}
+
+
+//PAGE:NUESTRA COMUNIDAD  /*PAGE:NUESTRA COMUNIDAD*/
+
+.historia {
+    box-shadow: 0px 0px 6px 5px rgba(0,0,0,0.37);
+    background-color: #f2f7f7;
+    border-radius: .5rem;
+    margin: 20px 30px 20px 30px;
+    padding: 5px;
+
+    p {
+        font-family: $funte-secundaria;
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+.autoridades {
+    box-shadow: 0px 0px 6px 5px rgba(0,0,0,0.37);
+    background-color: #f2f7f7;
+    border-radius: .5rem;
+    margin: 20px 30px 20px 30px;
+
+    p {
+        font-family: $funte-secundaria;
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.8rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+//PAGE: INSCRIPCIONES /*PAGE: INSCRIPCIONES*/
+
+.inscripciones {
+    box-shadow: 0px 0px 6px 5px rgba(0,0,0,0.37);
+    background-color: #f2f7f7;
+    border-radius: .5rem;
+    margin: 50px 20px;
+    padding: 35px;
+    P {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+        text-align: justify;
+
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        p {
+            font-size: 2.4rem;
+        }
+    }
+}

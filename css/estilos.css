@@ -1,215 +1,310 @@
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-body {
-    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
-    background-blend-mode: screen;
-}
-
 .encabezado {
-    border: 3px black double;
-    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-    width: 100%;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;    
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  border: 3px black double;
+  width: 100%;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
 }
-
-.imagenUno {
-    width: 100%;
-    margin: 25px;
-}
-
-h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    margin: 25px auto;
-}
-
-@media (max-width: 920px) {
-    h1 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width:480px){
-    h1 {
-        font-size: 20px;
-    }
+.encabezado .imagenUno {
+  width: 100%;
+  margin: 25px;
 }
 
 nav {
-    background-image: linear-gradient(#56CCF2, #6DD5FA, #FFFFFF);
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+  background-image: linear-gradient(#56CCF2, #6DD5FA, #FFFFFF);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0 auto;
+}
+nav .navbar-brand img {
+  position: relative;
+}
+nav .navbar-nav a {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.piedp {
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  width: 100%;
+  height: 50px;
+  margin-top: 3rem;
+}
+.piedp h3 {
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .piedp h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.formulario {
+  background-color: #D6E4E5;
+  border-radius: 0.3rem;
+}
+.formulario .campo .texto {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4rem;
+}
+.formulario .placeholder {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.formulario .campo .input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 1rem;
+}
+.formulario .input-text {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.formulario .boton {
+  background-image: linear-gradient(#56CCF2, #6DD5FA, #FFFFFF);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 30px;
+}
+.formulario .boton:hover {
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .formulario .input {
+    height: 50px;
+  }
+  .formulario .input-text {
+    height: 200px;
+    font-size: 2rem;
+  }
+  .formulario .texto {
+    font-size: 2rem;
+  }
+  .formulario .placeholder {
+    font-size: 1.8rem;
+  }
+  .formulario .boton {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  .campo:nth-child(3),
+.campo:nth-child(4),
+.campo:nth-child(5) {
+    grid-column: 1/3;
+  }
+  .input {
+    height: 40px;
+  }
+  .input-text {
+    height: 150px;
+    font-size: 1.8rem;
+  }
+  .texto {
+    font-size: 1.8rem;
+  }
+  .placeholder {
+    font-size: 1.5rem;
+  }
+  .boton {
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px auto;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.contenidoPrincipal {
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.37);
+  background-color: #f2f7f7;
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.contenidoPrincipal .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contenidoPrincipal .seccionDos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenidoPrincipal .imagenDos {
+  width: 100%;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+.contenidoPrincipal .seccionUno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenidoPrincipal .seccionUno p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contenidoPrincipal .contenidoPrincipal {
+    width: auto;
     margin-left: 1rem;
     margin-right: 1rem;
-    padding: 0 auto;
+  }
+  .contenidoPrincipal .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  .contenidoPrincipal .seccionUno p {
+    font-size: 1.8rem;
+    margin: auto;
+  }
 }
-
-.navbar-brand img {
-    position: relative;
+@media (min-width: 992px) {
+  .contenidoPrincipal .seccionUno p {
+    font-size: 2rem;
+  }
 }
-
-.navbar-nav a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.gridArea {
-    margin: 10px;
-    display: grid;
-    grid-template-areas:
-    "main main main main"
-    "seccion-dos seccion-dos seccion-uno seccion-uno"
-    "pie-de-pagina pie-de-pagina pie-de-pagina pie-de-pagina";
-    
-}
-
-
-
-@media (max-width: 920px) {
-    .gridArea {
-        grid-template-areas: 
-        "main main"
-        "seccion-dos seccion-uno"
-        "pie-de-pagina pie-de-pagina";
-    }
-}
-
-@media (max-width:480px) {
-    .gridArea {
-        grid-template-areas:
-        "main"
-        "seccion-dos"
-        "seccion-uno"
-        "pie-de-pagina";
-    } 
-}
-
-main {
-    grid-area: contenidoprincipal;
-    background-color: cornsilk;
-    border: black 3px double;
-    height: auto;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-.seccionUno {
-    grid-area: seccion-uno;
-
-}
-
-.imagenDos {
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-
-.seccionDos {
-    grid-area: seccion-dos;
-}
-
-.seccionDos p {
-    margin: 55px 25px 55px 25px;
-    text-align: center;
-    font-size: 20px;
-}
-
-@media (max-width: 920px) {
-    .seccionDos p {
-        font-size: medium;
-    }
-    .imagenDos {
-        margin-top: 100px;
-    }
-
-}
-
-@media (max-width:480px) {
-    .imagenDos {
-        margin-bottom: 25px;
-       
-    }
-}
-
-
-footer {
-    grid-area: pie-de-pagina;
-    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-    width: 100%;
-    height: 50px;
-    
-}
-
-footer h3 {
-    font-family: 'Libre Baskerville', serif;
-    text-align: center;
-    font-size: 16px;
-
-}
-
-@media (max-width:480px) {
-    footer h3 {
-        font-size: x-small;
-    }
-}
-
 
 .historia {
-    border: groove;
-    background-color: azure;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    text-align: justify;
-    margin: 20px 30px 20px 30px;
-    padding: 5px 5px 5px 5px;
-   
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.37);
+  background-color: #f2f7f7;
+  border-radius: 0.5rem;
+  margin: 20px 30px 20px 30px;
+  padding: 5px;
 }
-h2 {
-    font-family: 'Libre Baskerville', serif;
-    text-align: center;
+.historia p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .historia p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .historia p {
     font-size: 2rem;
-    font-weight: bold;
-}
-
-@media (max-width: 920px) {
-    h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width:480px){
-    h2 {
-        font-size: 20px;
-    }
+  }
 }
 
 .autoridades {
-    background-color: rgb(211, 222, 220);
-    border: groove;
-    margin: 20px 30px 20px 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-    text-align: center;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.37);
+  background-color: #f2f7f7;
+  border-radius: 0.5rem;
+  margin: 20px 30px 20px 30px;
 }
-
+.autoridades p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .autoridades p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 992px) {
+  .autoridades p {
+    font-size: 2rem;
+  }
+}
 
 .inscripciones {
-    background-color: rgb(211, 222, 220);
-    border: double;
-    margin-top: 50px;
-    padding: 50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    text-align: justify;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.37);
+  background-color: #f2f7f7;
+  border-radius: 0.5rem;
+  margin: 50px 20px;
+  padding: 35px;
+}
+.inscripciones P {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .inscripciones p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .inscripciones p {
+    font-size: 2.4rem;
+  }
 }
 
+/*# sourceMappingURL=estilos.css.map */
